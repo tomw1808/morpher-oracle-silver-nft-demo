@@ -1,29 +1,17 @@
-This is a [RainbowKit](https://rainbowkit.com) + [wagmi](https://wagmi.sh) + [Next.js](https://nextjs.org/) project bootstrapped with [`create-rainbowkit`](/packages/create-rainbowkit).
+This is a demo for the [Morpher Oracle](https://oracle.morpher.com).
 
-## Getting Started
+## Content
 
-First, run the development server:
+![Screenshot Demo App](./screenshot.png)
 
-```bash
-npm run dev
-```
+In this Demo App you can see how the Data-Dependent User Operations are working.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+It creates a new ERC4337 Safe Wallet. Then it mints a Silver NFT with current USD prices for an Ounce of Silver. This is done by getting two prices:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+The XAG/USD Prices, tick data accuracy. And the POL/USD Prices also with tick-level accuracy.
 
-## Learn More
+This is packaged up into an ERC4337 Transaction with two UserOps:
 
-To learn more about this stack, take a look at the following resources:
+The first User-OP is updating the Oracle, the second User-Op is then talking to the Silver NFT and mints the NFT for current prices.
 
-- [RainbowKit Documentation](https://rainbowkit.com) - Learn how to customize your wallet connection flow.
-- [wagmi Documentation](https://wagmi.sh) - Learn how to interact with Ethereum.
-- [Next.js Documentation](https://nextjs.org/docs) - Learn how to build a Next.js application.
-
-You can check out [the RainbowKit GitHub repository](https://github.com/rainbow-me/rainbowkit) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Read more on https://oracle.morpher.com
