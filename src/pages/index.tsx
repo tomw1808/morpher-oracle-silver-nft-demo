@@ -165,7 +165,7 @@ const Home: NextPage = () => {
             <p>You own {goldCoinBalance.data?.toString()} Silver Coins
             </p>
           </div>
-          <button onClick={() => mintNft()} disabled={gasBalance.data == undefined || pricePreview === undefined || pricePreviewPol === undefined || Number(formatUnits(gasBalance.data?.value, gasBalance.data?.decimals)) < (pricePreview.value / pricePreviewPol.value)} type="button" className="text-white bg-[#a0a0a0] hover:bg-[#FF9119]/80 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:hover:bg-[#FF9119]/80 dark:focus:ring-[#FF9119]/40 me-2 mb-2">
+          <button className="mb-6" onClick={() => mintNft()} disabled={gasBalance.data == undefined || pricePreview === undefined || pricePreviewPol === undefined || Number(formatUnits(gasBalance.data?.value, gasBalance.data?.decimals)) < (pricePreview.value / pricePreviewPol.value)} type="button" className="text-white bg-[#a0a0a0] hover:bg-[#FF9119]/80 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:hover:bg-[#FF9119]/80 dark:focus:ring-[#FF9119]/40 me-2 mb-2">
 
             Mint one for ${pricePreview?.value.toFixed(2)} ({pricePreview !== undefined && pricePreviewPol !== undefined ? (pricePreview.value / pricePreviewPol.value).toFixed(3) + " POL" : ""}) ({dataPrice.isFetched ? parseFloat(formatEther(dataPrice.data as bigint)) : "?"} Data Price)
           </button>
