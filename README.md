@@ -26,16 +26,16 @@ This DApp showcases the implementation of Data-Dependent User Operations in Web3
 
 - **Smart Contracts**: Solidity, ERC4337, ERC721
 - **Frontend**: Next.js, React, TypeScript, Tailwind CSS
-- **Web3 Integration**: wagmi, ethers.js
+- **Web3 Integration**: wagmi, viem
 - **Oracle**: Morpher Oracle for real-time price feeds
 - **Development**: Foundry (Forge, Anvil, Cast)
 
 ## Links & Resources
 
+- [Technical Blog Post](https://ethereum-blockchain-developer.com/126-morpher-oracle/00-overview/)
 - [Morpher Oracle Documentation](https://oracle.morpher.com)
+- [Live Demo](https://morpher-oracle-silver-nft-demo.vercel.app/)
 - [ERC4337 Account Abstraction Specification](https://eips.ethereum.org/EIPS/eip-4337)
-- [Live Demo](https://oracle.morpher.com/demo)
-- [Technical Blog Post](https://oracle.morpher.com/blog)
 
 ## Getting Started
 
@@ -52,7 +52,7 @@ forge script script/DeployCoins.s.sol
 
 ## Contributing
 
-Contributions are welcome! Please read our contributing guidelines and submit PRs.
+Contributions are welcome!
 
 ## License
 

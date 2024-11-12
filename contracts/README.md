@@ -60,17 +60,7 @@ anvil
 
 # Run tests with gas reporting
 forge test --gas-report
-
-# Format code
-forge fmt
 ```
-
-### Gas Optimization
-```shell
-# Generate gas snapshots
-forge snapshot
-```
-
 ## Resources & Documentation
 
 - [Foundry Book](https://book.getfoundry.sh/)
