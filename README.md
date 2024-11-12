@@ -14,13 +14,12 @@ This DApp showcases the implementation of Data-Dependent User Operations in Web3
 - Automated oracle price updates
 - Smart contract interaction with verified price data
 
-## How It Works
+## Links & Resources
 
-1. Creates an ERC4337 Safe Wallet for secure transactions
-2. Fetches real-time Silver (XAG/USD) and Polish Złoty (POL/USD) price data
-3. Executes bundled ERC4337 transactions:
-   - First UserOp: Updates oracle with latest price data
-   - Second UserOp: Mints Silver NFT with current market prices
+- [Technical Blog Post](https://ethereum-blockchain-developer.com/126-morpher-oracle/00-overview/)
+- [Morpher Oracle Documentation](https://oracle.morpher.com)
+- [Live Demo](https://morpher-oracle-silver-nft-demo.vercel.app/)
+- [ERC4337 Account Abstraction Specification](https://eips.ethereum.org/EIPS/eip-4337)
 
 ## Tools & Technologies
 
@@ -30,12 +29,13 @@ This DApp showcases the implementation of Data-Dependent User Operations in Web3
 - **Oracle**: Morpher Oracle for real-time price feeds
 - **Development**: Foundry (Forge, Anvil, Cast)
 
-## Links & Resources
+## How It Works
 
-- [Technical Blog Post](https://ethereum-blockchain-developer.com/126-morpher-oracle/00-overview/)
-- [Morpher Oracle Documentation](https://oracle.morpher.com)
-- [Live Demo](https://morpher-oracle-silver-nft-demo.vercel.app/)
-- [ERC4337 Account Abstraction Specification](https://eips.ethereum.org/EIPS/eip-4337)
+1. Creates an ERC4337 Safe Wallet for secure transactions
+2. Fetches real-time Silver (XAG/USD) and Polish Złoty (POL/USD) price data
+3. Executes bundled ERC4337 transactions:
+   - First UserOp: Updates oracle with latest price data
+   - Second UserOp: Mints Silver NFT with current market prices
 
 ## Getting Started
 
