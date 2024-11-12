@@ -1,66 +1,93 @@
-## Foundry
+# Smart Contracts for Precious Metals Oracle Integration
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+This repository contains the smart contracts powering a decentralized precious metals pricing and NFT system, built with Foundry and integrated with the Morpher Oracle.
 
-Foundry consists of:
+## Overview
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+The smart contracts implement:
+- ERC721 tokens representing precious metals
+- Oracle price feed integration
+- Data-dependent transaction execution
+- Account abstraction (ERC4337) compatibility
 
-## Documentation
+## Development Stack
 
-https://book.getfoundry.sh/
+### Foundry Toolkit
 
-## Usage
+Foundry is our core development framework, chosen for its speed and reliability in Ethereum development:
 
-### Build
+- **Forge**: Lightning-fast testing framework
+- **Cast**: Command-line interface for contract interaction
+- **Anvil**: Local development network
+- **Chisel**: Interactive Solidity REPL
 
-```shell
-$ forge build
-```
+### Key Technologies
 
-### Test
+- Solidity ^0.8.19
+- ERC4337 Account Abstraction
+- ERC721 Token Standard
+- Morpher Oracle Integration
 
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
+## Quick Start
 
 ```shell
-$ forge snapshot
+# Install Foundry
+curl -L https://foundry.paradigm.xyz | bash
+foundryup
+
+# Build contracts
+forge build
+
+# Run tests
+forge test
+
+# Deploy
+forge script script/DeployCoins.s.sol --rpc-url <your_rpc_url> --private-key <your_private_key>
 ```
 
-### Anvil
+## Contract Architecture
 
+- `PreciousMetals.sol`: Main token contracts
+- `OracleIntegration.sol`: Price feed implementation
+- `DeployCoins.s.sol`: Deployment scripts
+
+## Testing & Development
+
+### Local Development
 ```shell
-$ anvil
+# Start local node
+anvil
+
+# Run tests with gas reporting
+forge test --gas-report
+
+# Format code
+forge fmt
 ```
 
-### Deploy
-
+### Gas Optimization
 ```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+# Generate gas snapshots
+forge snapshot
 ```
 
-### Cast
+## Resources & Documentation
 
-```shell
-$ cast <subcommand>
-```
+- [Foundry Book](https://book.getfoundry.sh/)
+- [ERC4337 Specification](https://eips.ethereum.org/EIPS/eip-4337)
+- [Morpher Oracle Docs](https://oracle.morpher.com)
 
-### Help
+## Security
 
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+- All contracts are thoroughly tested
+- Gas optimization implemented
+- Oracle data verification
+- Standard security patterns followed
+
+## Contributing
+
+Contributions welcome! Please check our contributing guidelines.
+
+## License
+
+MIT License - see LICENSE file for details

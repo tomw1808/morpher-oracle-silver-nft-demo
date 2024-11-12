@@ -1,17 +1,59 @@
-This is a demo for the [Morpher Oracle](https://oracle.morpher.com).
+# Precious Metals Oracle Demo DApp
 
-## Content
+A decentralized application demonstrating real-time price feeds and data-dependent smart contract operations using the [Morpher Oracle](https://oracle.morpher.com) for precious metals markets.
+
+## Overview
 
 ![Screenshot Demo App](./screenshot.png)
 
-In this Demo App you can see how the Data-Dependent User Operations are working.
+This DApp showcases the implementation of Data-Dependent User Operations in Web3, featuring:
 
-It creates a new ERC4337 Safe Wallet. Then it mints a Silver NFT with current USD prices for an Ounce of Silver. This is done by getting two prices:
+- Real-time precious metal price feeds (XAG/USD, POL/USD)
+- ERC4337 Account Abstraction
+- NFT minting based on live market data
+- Automated oracle price updates
+- Smart contract interaction with verified price data
 
-The XAG/USD Prices, tick data accuracy. And the POL/USD Prices also with tick-level accuracy.
+## How It Works
 
-This is packaged up into an ERC4337 Transaction with two UserOps:
+1. Creates an ERC4337 Safe Wallet for secure transactions
+2. Fetches real-time Silver (XAG/USD) and Polish Złoty (POL/USD) price data
+3. Executes bundled ERC4337 transactions:
+   - First UserOp: Updates oracle with latest price data
+   - Second UserOp: Mints Silver NFT with current market prices
 
-The first User-OP is updating the Oracle, the second User-Op is then talking to the Silver NFT and mints the NFT for current prices.
+## Tools & Technologies
 
-Read more on https://oracle.morpher.com
+- **Smart Contracts**: Solidity, ERC4337, ERC721
+- **Frontend**: Next.js, React, TypeScript, Tailwind CSS
+- **Web3 Integration**: wagmi, ethers.js
+- **Oracle**: Morpher Oracle for real-time price feeds
+- **Development**: Foundry (Forge, Anvil, Cast)
+
+## Links & Resources
+
+- [Morpher Oracle Documentation](https://oracle.morpher.com)
+- [ERC4337 Account Abstraction Specification](https://eips.ethereum.org/EIPS/eip-4337)
+- [Live Demo](https://oracle.morpher.com/demo)
+- [Technical Blog Post](https://oracle.morpher.com/blog)
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Deploy contracts
+forge script script/DeployCoins.s.sol
+```
+
+## Contributing
+
+Contributions are welcome! Please read our contributing guidelines and submit PRs.
+
+## License
+
+MIT License - see LICENSE file for details
